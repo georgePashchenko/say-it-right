@@ -5,15 +5,15 @@
           android:versionCode="1"
           android:versionName="1.0">
     <!-- We add an application tag here just so that we can indicate that
-         this package needs to link against the android.test library,
-         which is needed when building test cases. -->
+         this package needs to link against the android.test_case library,
+         which is needed when building test_case cases. -->
     <application>
         <uses-library android:name="android.test.runner"/>
     </application>
     <!--
-    This declares that this application uses the instrumentation test runner targeting
+    This declares that this application uses the instrumentation test_case runner targeting
     the package of km81m.say_it_right.  To run the tests use the command:
-    "adb shell am instrument -w km81m.say_it_right.tests/android.test.InstrumentationTestRunner"
+    "adb shell am instrument -w km81m.say_it_right.tests/android.test_case.InstrumentationTestRunner"
     -->
     <instrumentation android:name="android.test.InstrumentationTestRunner"
                      android:targetPackage="km81m.say_it_right"

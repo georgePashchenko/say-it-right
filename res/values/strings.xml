@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">say-it-right</string>
+
+    <string name="main_start_test_button">Start</string>
+
+    <string name="level_label">Select level</string>
+    <string name="level_start_test_button">Start</string>
+
+
 </resources>
