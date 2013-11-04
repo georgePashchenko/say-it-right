@@ -33,7 +33,7 @@ public class TestResultsTest extends TestCase {
         userAnswer.addAnswer(9, 2);
 
         TestResults testResults = new TestResults(testBlock, userAnswer);
-        assertEquals(0.9, testResults.getCorrectAnswers(), 0.0001);
+        assertEquals(9, testResults.getCorrectAnswers());
     }
 
 }

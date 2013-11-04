@@ -11,8 +11,7 @@ import java.util.List;
  */
 public class TestResults {
 
-    //percentage of correct answer
-    private double correctAnswers;
+    private int correctAnswers;
     /*
         for extended results analysis:
         table with correct and users answers
@@ -26,18 +25,18 @@ public class TestResults {
         this.correctAnswers = calculateResult(testBlock, userAnswer);
     }
 
-    private double calculateResult(TestBlock testBlock, UserAnswer userAnswer) {
+    private int calculateResult(TestBlock testBlock, UserAnswer userAnswer) {
         List<SingleTest> singleTests = testBlock.getSingleTests();
-        double res = 0;
+        int res = 0;
         for (int i = 0; i < 10; i++) {
             if (singleTests.get(i).getAnswer() == userAnswer.getAnswer(i)) {
                 res++;
             }
         }
-        return res/10;
+        return res;
     }
 
-    public double getCorrectAnswers() {
+    public int getCorrectAnswers() {
         return correctAnswers;
     }
 
