@@ -1,6 +1,7 @@
 package km81m.say_it_right.logic;
 
-import java.util.ArrayList;
+import km81m.say_it_right.logic.entities.SingleTest;
+
 import java.util.List;
 
 /**

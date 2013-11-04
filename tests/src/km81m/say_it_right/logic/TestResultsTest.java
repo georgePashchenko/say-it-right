@@ -1,6 +1,7 @@
 package km81m.say_it_right.logic;
 
 import junit.framework.TestCase;
+import km81m.say_it_right.logic.entities.SingleTest;
 
 import java.util.ArrayList;
 import java.util.List;

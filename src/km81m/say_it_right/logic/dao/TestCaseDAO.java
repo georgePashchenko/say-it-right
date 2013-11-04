@@ -1,4 +1,6 @@
-package km81m.say_it_right.logic;
+package km81m.say_it_right.logic.dao;
+
+import km81m.say_it_right.logic.TestBlock;
 
 /**
  * User: alexeydushenin

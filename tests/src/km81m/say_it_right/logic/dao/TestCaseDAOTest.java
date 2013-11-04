@@ -1,6 +1,9 @@
-package km81m.say_it_right.logic;
+package km81m.say_it_right.logic.dao;
 
 import junit.framework.TestCase;
+import km81m.say_it_right.logic.TestBlock;
+import km81m.say_it_right.logic.dao.TestCaseDAO;
+import km81m.say_it_right.logic.entities.SingleTest;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 

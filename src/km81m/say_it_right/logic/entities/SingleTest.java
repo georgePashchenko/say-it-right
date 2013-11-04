@@ -1,4 +1,4 @@
-package km81m.say_it_right.logic;
+package km81m.say_it_right.logic.entities;
 
 /**
  * User: alexeydushenin
