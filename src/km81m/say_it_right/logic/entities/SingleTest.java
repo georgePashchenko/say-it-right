@@ -1,5 +1,7 @@
 package km81m.say_it_right.logic.entities;
 
+import km81m.say_it_right.logic.Level;
+
 /**
  * User: alexeydushenin
  * Date: 11/3/13
@@ -11,7 +13,7 @@ public class SingleTest {
     private String word;
     //position in word
     private int answer;
-    private int level;
+    private Level level;
 
     public String getWord() {
         return word;
@@ -29,11 +31,11 @@ public class SingleTest {
         this.answer = answer;
     }
 
-    public int getLevel() {
+    public Level getLevel() {
         return level;
     }
 
-    public void setLevel(int level) {
+    public void setLevel(Level level) {
         this.level = level;
     }
 }

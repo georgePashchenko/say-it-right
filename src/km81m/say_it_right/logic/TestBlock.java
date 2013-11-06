@@ -14,7 +14,7 @@ import java.util.List;
 public class TestBlock {
 
     private List<SingleTest> singleTests = new ArrayList<SingleTest>();
-    private int level;
+    private Level level;
 
     public List<SingleTest> getSingleTests() {
         return singleTests;
@@ -24,11 +24,11 @@ public class TestBlock {
         this.singleTests = singleTests;
     }
 
-    public int getLevel() {
+    public Level getLevel() {
         return level;
     }
 
-    public void setLevel(int level) {
+    public void setLevel(Level level) {
         this.level = level;
     }
 }

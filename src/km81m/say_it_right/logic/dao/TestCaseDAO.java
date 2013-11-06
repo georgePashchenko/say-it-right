@@ -1,5 +1,6 @@
 package km81m.say_it_right.logic.dao;
 
+import km81m.say_it_right.logic.Level;
 import km81m.say_it_right.logic.TestBlock;
 
 /**
@@ -14,6 +15,6 @@ public interface TestCaseDAO {
      * @param level test level
      * @return test case
      */
-    public TestBlock getTestBlock(int level);
+    public TestBlock getTestBlock(Level level);
 
 }

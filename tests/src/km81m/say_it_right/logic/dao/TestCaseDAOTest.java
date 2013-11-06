@@ -1,6 +1,7 @@
 package km81m.say_it_right.logic.dao;
 
 import junit.framework.TestCase;
+import km81m.say_it_right.logic.Level;
 import km81m.say_it_right.logic.TestBlock;
 import km81m.say_it_right.logic.entities.SingleTest;
 import org.mockito.Mock;
@@ -18,7 +19,7 @@ import static org.mockito.Mockito.when;
  */
 public class TestCaseDAOTest extends TestCase {
 
-    private final int LEVEL = 2;
+    private final Level LEVEL = Level.MEDIUM;
 
     @Mock
     private TestCaseDAO testCaseDAO;
