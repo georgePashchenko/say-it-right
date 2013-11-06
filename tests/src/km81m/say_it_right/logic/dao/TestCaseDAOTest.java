@@ -2,7 +2,6 @@ package km81m.say_it_right.logic.dao;
 
 import junit.framework.TestCase;
 import km81m.say_it_right.logic.TestBlock;
-import km81m.say_it_right.logic.dao.TestCaseDAO;
 import km81m.say_it_right.logic.entities.SingleTest;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -10,7 +9,7 @@ import org.mockito.MockitoAnnotations;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
 
 /**
  * User: alexeydushenin
@@ -41,6 +40,7 @@ public class TestCaseDAOTest extends TestCase {
             tests.add(singleTest);
         }
 
+        //Some unnoticed, not important change
         testBlock.setLevel(LEVEL);
         testBlock.setSingleTests(tests);
 
