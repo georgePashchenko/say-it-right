@@ -2,10 +2,14 @@
 <resources>
     <string name="app_name">say-it-right</string>
 
-    <string name="main_start_test_button">Start</string>
+    <string name="main_start_test_button">ИГРАТЬ</string>
 
     <string name="level_label">Select level</string>
     <string name="level_start_test_button">Start</string>
+    <string name="main_history_button">ИСТОРИЯ</string>
+    <string name="main_settings_button">НАСТРОЙКИ</string>
+    <string name="main_user_label">ПРОФИЛЬ :</string>
+    <string name="main_level_label">УРОВЕНЬ :</string>
 
 
 </resources>

@@ -3,13 +3,64 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-        >
+              android:layout_gravity="center"
+              android:layout_margin="@dimen/main_layout_margin">
+
+    <TextView android:id="@+id/main_user_label"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              android:layout_width="wrap_content"
+              android:text="@string/main_user_label"
+              android:layout_gravity="center"/>
+
+    <TextView android:id="@+id/main_user_value"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              android:layout_width="wrap_content"
+              android:layout_gravity="center"/>
+
+    <TextView android:id="@+id/main_level_label"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              android:layout_width="wrap_content"
+              android:text="@string/main_level_label"
+              android:layout_gravity="center"/>
+
+    <TextView android:id="@+id/main_level_value"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              android:layout_width="wrap_content"
+              android:layout_gravity="center"/>
 
     <Button android:id="@+id/main_bt_start_test"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
             android:text="@string/main_start_test_button"
-            android:onClick="startTest"/>
+            android:onClick="startTest"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin"/>
+
+    <Button android:id="@+id/main_bt_history"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:text="@string/main_history_button"
+            android:onClick="showHistory"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin"/>
+
+    <Button android:id="@+id/main_bt_settings"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:text="@string/main_settings_button"
+            android:onClick="showSettings"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin"/>
 
 </LinearLayout>
 
