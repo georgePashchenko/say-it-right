@@ -10,6 +10,15 @@
     <string name="main_settings_button">НАСТРОЙКИ</string>
     <string name="main_user_label">ПРОФИЛЬ :</string>
     <string name="main_level_label">УРОВЕНЬ :</string>
+    <string name="settings_OK_button">ПРИМЕНИТЬ</string>
+    <string name="settings_Cancel_button">ОТМЕНА</string>
+    <string name="main_user_button">+</string>
+
+    <string-array name="level_array">
+        <item>ЛЕГКИЙ</item>
+        <item>СРЕДНИЙ</item>
+        <item>ТЯЖЕЛЫЙ</item>
+    </string-array>
 
 
 </resources>
