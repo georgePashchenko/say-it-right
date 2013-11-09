@@ -33,6 +33,9 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    public void removeUserData(View view) {
+    }
+
     public void showHistory(View view) {
         Intent intent = new Intent(this, HistoryActivity.class);
         startActivity(intent);

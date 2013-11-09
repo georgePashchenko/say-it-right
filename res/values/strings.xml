@@ -10,6 +10,9 @@
     <string name="main_user_label">ПРОФИЛЬ :</string>
     <string name="main_level_label">УРОВЕНЬ :</string>
     <string name="main_user_button">+</string>
+    <string name="main_user_remove">-</string>
+    <string name="add_user_button">ДОБАВИТЬ</string>
+    <string name="input_user_name">ВВЕДИТЕ ИМЯ</string>
 
     <string-array name="level_array">
         <item>ЛЕГКИЙ</item>

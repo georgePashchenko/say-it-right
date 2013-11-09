@@ -43,6 +43,13 @@
                 android:text="@string/main_user_button"
                 android:onClick="modifyUserData"/>
 
+        <Button android:id="@+id/main_bt_user_remove"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="@string/main_user_remove"
+                android:onClick="removeUserData"/>
+
     </LinearLayout>
 
     <Button android:id="@+id/main_bt_start_test"

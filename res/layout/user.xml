@@ -2,7 +2,22 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:layout_gravity="center"
+              android:layout_margin="@dimen/main_layout_margin">
+
+    <EditText android:id="@+id/user_data"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="70dp"
+              android:inputType="text"
+              android:imeActionLabel="@string/add_user_button"
+              android:hint="@string/input_user_name"/>
+
+    <Button android:id="@+id/user_add"
+            android:layout_height="70dp"
+            android:layout_width="match_parent"
+            android:text="@string/add_user_button"
+            android:onClick="addUser"/>
 
 </LinearLayout>
