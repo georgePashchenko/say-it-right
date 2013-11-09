@@ -24,7 +24,17 @@ public class MainActivity extends Activity {
     }
 
     public void startTest(View view) {
-        Intent intent = new Intent(this, LevelActivity.class);
+        Intent intent = new Intent(this, GameActivity.class);
+        startActivity(intent);
+    }
+
+    public void modifyUserData(View view) {
+        Intent intent = new Intent(this, UserActivity.class);
+        startActivity(intent);
+    }
+
+    public void showHistory(View view) {
+        Intent intent = new Intent(this, HistoryActivity.class);
         startActivity(intent);
     }
 
