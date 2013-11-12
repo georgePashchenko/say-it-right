@@ -6,11 +6,11 @@
               android:layout_gravity="center"
               android:layout_margin="@dimen/main_layout_margin">
 
-    <TextView android:id="@+id/main_user_label"
+    <TextView android:id="@+id/main_level_label"
               android:layout_height="0dp"
               android:layout_weight="1"
               android:layout_width="wrap_content"
-              android:text="@string/main_user_label"
+              android:text="@string/main_level_label"
               android:layout_gravity="center"/>
 
     <Spinner android:id="@+id/settings_level"
@@ -18,11 +18,11 @@
              android:layout_weight="2"
              android:layout_width="match_parent"/>
 
-    <TextView android:id="@+id/main_level_label"
+    <TextView android:id="@+id/main_user_label"
               android:layout_height="0dp"
               android:layout_weight="1"
               android:layout_width="wrap_content"
-              android:text="@string/main_level_label"
+              android:text="@string/main_user_label"
               android:layout_gravity="center"/>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
