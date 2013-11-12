@@ -15,5 +15,6 @@
         <activity android:name=".activities.HistoryActivity"/>
         <activity android:name=".activities.GameActivity"/>
         <activity android:name=".activities.UserActivity"/>
+        <activity android:name=".activities.ResultActivity"/>
     </application>
 </manifest>

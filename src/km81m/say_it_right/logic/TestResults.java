@@ -2,6 +2,7 @@ package km81m.say_it_right.logic;
 
 import km81m.say_it_right.logic.entities.SingleTest;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -10,7 +11,7 @@ import java.util.List;
  * Time: 2:27 PM
  * Results of test
  */
-public class TestResults {
+public class TestResults implements Serializable {
 
     private int correctAnswers;
     /*
@@ -19,6 +20,9 @@ public class TestResults {
      */
     private TestBlock testBlock;
     private UserAnswer userAnswer;
+
+    public TestResults() {
+    }
 
     public TestResults(TestBlock testBlock, UserAnswer userAnswer) {
         this.testBlock = testBlock;

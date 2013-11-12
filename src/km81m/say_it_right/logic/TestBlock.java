@@ -2,6 +2,7 @@ package km81m.say_it_right.logic;
 
 import km81m.say_it_right.logic.entities.SingleTest;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +12,7 @@ import java.util.List;
  * Time: 9:45 PM
  * Case for 10 specific level singleTests
  */
-public class TestBlock {
+public class TestBlock implements Serializable {
 
     private List<SingleTest> singleTests = new ArrayList<SingleTest>();
     private Level level;
