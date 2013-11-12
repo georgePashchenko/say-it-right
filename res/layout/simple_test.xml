@@ -4,11 +4,32 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:id="@+id/simple_test_layout">
+              android:layout_margin="@dimen/main_margin">
 
-    <EditText android:id="@+id/test_data"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:inputType="text"/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center">
+
+        <Button android:id="@+id/main_bt_history"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/test_end_button"
+                android:onClick="showResult"
+                android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:id="@+id/simple_test_layout">
+
+
+
+    </LinearLayout>
 
 </LinearLayout>

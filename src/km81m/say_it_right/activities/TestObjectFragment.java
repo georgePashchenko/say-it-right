@@ -22,7 +22,6 @@ public class TestObjectFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.simple_test, container, false);
         Bundle args = getArguments();
         int pos = args.getInt("pos");
-        ((EditText)rootView.findViewById(R.id.test_data)).setText("text" + pos);
 
         LinearLayout layout = (LinearLayout) rootView.findViewById(R.id.simple_test_layout);
         for (int i = 0; i < pos; i++) {
