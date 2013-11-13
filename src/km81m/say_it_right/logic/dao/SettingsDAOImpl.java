@@ -1,9 +1,11 @@
 package km81m.say_it_right.logic.dao;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import km81m.say_it_right.logic.Level;
 import km81m.say_it_right.logic.entities.Settings;
+import km81m.say_it_right.logic.entities.User;
 
 /**
  * User: alexeydushenin
@@ -41,6 +43,14 @@ public enum  SettingsDAOImpl implements SettingsDAO {
     @Override
     public void setActiveSettings(Settings settings) {
 
+    }
+
+    @Override
+    public void updateActiveUser(User user) {
+        SQLiteDatabase db = DBHolder.getDBHelper().getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(SettingsDAO.USER, user.getId());
+        db.update(SettingsDAO.TABLE, values, null, null);
     }
 
 }

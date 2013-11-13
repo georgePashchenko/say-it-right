@@ -44,7 +44,12 @@ public class MainActivity extends Activity {
         ArrayAdapter<User> usersAdapter = new ArrayAdapter<User>(this, android.R.layout.simple_spinner_item, users);
         usersAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         userSpinner.setAdapter(usersAdapter);
+
+        int pos = users.indexOf(settings.getActiveUser());
+        userSpinner.setSelection(pos);
     }
+
+
 
     public void startTest(View view) {
         Intent intent = new Intent(this, GameActivity.class);
@@ -68,5 +73,4 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(this, HistoryActivity.class);
         startActivity(intent);
     }
-
 }

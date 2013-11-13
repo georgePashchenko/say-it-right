@@ -1,6 +1,7 @@
 package km81m.say_it_right.logic.dao;
 
 import km81m.say_it_right.logic.entities.Settings;
+import km81m.say_it_right.logic.entities.User;
 
 /**
  * User: alexeydushenin
@@ -16,4 +17,5 @@ public interface SettingsDAO {
 
     Settings getActiveSettings();
     void setActiveSettings(Settings settings);
+    void updateActiveUser(User user);
 }

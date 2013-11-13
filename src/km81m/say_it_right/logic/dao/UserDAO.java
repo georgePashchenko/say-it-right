@@ -15,7 +15,7 @@ public interface UserDAO {
     String ID = "_id";
     String NAME = "user_name";
 
-    public void save(User user);
+    public User save(User user);
     public List<User> getAllUsers();
     public void delete(User user);
     public void clear();

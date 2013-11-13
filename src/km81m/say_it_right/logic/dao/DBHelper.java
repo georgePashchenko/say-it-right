@@ -76,7 +76,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     private boolean isExists(SQLiteDatabase db) {
-        /*Cursor cursor = null;
+        Cursor cursor = null;
         try {
             String[] projection = {SettingsDAO.ID, SettingsDAO.LEVEL, SettingsDAO.USER};
             cursor = db.query(SettingsDAO.TABLE, projection, null, null, null, null, null);
@@ -87,8 +87,8 @@ public class DBHelper extends SQLiteOpenHelper {
             if (cursor != null) {
                 cursor.close();
             }
-        }*/
-        return false;
+        }
+        //return false;
     }
 
     public void createDB() {

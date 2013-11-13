@@ -1,5 +1,6 @@
 package km81m.say_it_right.logic.dao;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import km81m.say_it_right.logic.entities.User;
@@ -17,8 +18,13 @@ public enum UserDAOImpl implements UserDAO {
     INSTANCE;
 
     @Override
-    public void save(User user) {
-        //To change body of implemented methods use File | Settings | File Templates.
+    public User save(User user) {
+        SQLiteDatabase db = DBHolder.getDBHelper().getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(UserDAO.NAME, user.getName());
+        long newRowId = db.insert(UserDAO.TABLE, null, values);
+        user.setId((int) newRowId);
+        return user;
     }
 
     @Override
