@@ -38,7 +38,13 @@ public class UserActivity extends Activity {
             settingsDAO.updateActiveUser(user);
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }
