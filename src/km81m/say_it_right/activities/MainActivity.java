@@ -57,6 +57,11 @@ public class MainActivity extends Activity {
     }
 
     public void removeUserData(View view) {
+        Spinner userSpinner = (Spinner) findViewById(R.id.settings_user);
+        User userToDelete = (User) userSpinner.getSelectedItem();
+        if (userToDelete.getId() != 1) {
+            userDAO.delete(userToDelete);
+        }
     }
 
     public void showHistory(View view) {

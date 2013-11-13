@@ -47,7 +47,10 @@ public enum UserDAOImpl implements UserDAO {
 
     @Override
     public void delete(User user) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        SQLiteDatabase db = DBHolder.getDBHelper().getWritableDatabase();
+        String selection = UserDAO.ID + "= ?";
+        String[] selectionArgs = {String.valueOf(user.getId())};
+        db.delete(UserDAO.TABLE, selection, selectionArgs);
     }
 
     @Override
