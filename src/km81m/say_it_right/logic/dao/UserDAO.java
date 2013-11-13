@@ -2,7 +2,7 @@ package km81m.say_it_right.logic.dao;
 
 import km81m.say_it_right.logic.entities.User;
 
-import java.util.Set;
+import java.util.List;
 
 /**
  * User: alexeydushenin
@@ -16,7 +16,7 @@ public interface UserDAO {
     String NAME = "user_name";
 
     public void save(User user);
-    public Set<User> getAllUsers();
+    public List<User> getAllUsers();
     public void delete(User user);
     public void clear();
     public User getUser(int id);

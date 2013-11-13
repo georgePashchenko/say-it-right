@@ -4,8 +4,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import km81m.say_it_right.logic.entities.User;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * User: alexeydushenin
@@ -22,8 +22,8 @@ public enum UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public Set<User> getAllUsers() {
-        Set<User> result = new HashSet<User>();
+    public List<User> getAllUsers() {
+        List<User> result = new ArrayList<User>();
         SQLiteDatabase db = DBHolder.getDBHelper().getReadableDatabase();
         String[] projection = {UserDAO.ID, UserDAO.NAME};
 
