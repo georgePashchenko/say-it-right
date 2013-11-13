@@ -7,8 +7,18 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import km81m.say_it_right.R;
+import km81m.say_it_right.logic.Level;
+import km81m.say_it_right.logic.dao.*;
+import km81m.say_it_right.logic.entities.Settings;
+import km81m.say_it_right.logic.entities.User;
+
+import java.util.Set;
 
 public class MainActivity extends Activity {
+
+    private SettingsDAO settingsDAO = SettingsDAOImpl.INSTANCE;
+    private UserDAO userDAO = UserDAOImpl.INSTANCE;
+
     /**
      * Called when the activity is first created.
      */
@@ -21,6 +31,14 @@ public class MainActivity extends Activity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.level_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+
+        DBHolder.init(getBaseContext());
+
+        Settings settings = settingsDAO.getActiveSettings();
+        Set<User> users = userDAO.getAllUsers();
+        System.out.println(users);
+
+        spinner.setSelection(settings.getLevel().getPosition());
     }
 
     public void startTest(View view) {

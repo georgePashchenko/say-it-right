@@ -10,8 +10,14 @@ import java.util.Set;
  * Time: 8:24 PM
  */
 public interface UserDAO {
+
+    String TABLE = "user_tb";
+    String ID = "_id";
+    String NAME = "user_name";
+
     public void save(User user);
     public Set<User> getAllUsers();
     public void delete(User user);
     public void clear();
+    public User getUser(int id);
 }
