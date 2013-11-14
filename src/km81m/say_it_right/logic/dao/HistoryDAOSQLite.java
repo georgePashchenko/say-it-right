@@ -17,7 +17,8 @@ import java.util.List;
  * Time: 5:37 PM
  */
 public enum HistoryDAOSQLite implements HistoryDAO {
-    ;
+
+    INSTANCE;
 
     @Override
     public List<History> getHistoryByUser(User user) {
@@ -32,15 +33,16 @@ public enum HistoryDAOSQLite implements HistoryDAO {
         Cursor cursor = null;
         try {
             cursor = db.query(HistoryDAO.TABLE, projection, selection, selectionArgs, null, null, sortOrder);
-            cursor.moveToFirst();
-            do {
-                History history = new History();
-                history.setUser(user);
-                history.setDate(new Date(cursor.getLong(cursor.getColumnIndex(HistoryDAO.DATE))));
-                history.setLevel(Level.getLevelByString(cursor.getString(cursor.getColumnIndex(HistoryDAO.LEVEL))));
-                history.setResult(cursor.getInt(cursor.getColumnIndex(HistoryDAO.RESULT)));
-                result.add(history);
-            } while (cursor.moveToNext());
+            if (cursor.moveToFirst()) {
+                do {
+                    History history = new History();
+                    history.setUser(user);
+                    history.setDate(new Date(cursor.getLong(cursor.getColumnIndex(HistoryDAO.DATE))));
+                    history.setLevel(Level.getLevelByString(cursor.getString(cursor.getColumnIndex(HistoryDAO.LEVEL))));
+                    history.setResult(cursor.getInt(cursor.getColumnIndex(HistoryDAO.RESULT)));
+                    result.add(history);
+                } while (cursor.moveToNext());
+            }
         } finally {
             if (cursor != null) {
                 cursor.close();

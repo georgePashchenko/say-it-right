@@ -6,6 +6,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 
 import static org.mockito.Mockito.when;
@@ -33,7 +34,7 @@ public class UserDAOTest extends TestCase {
 
         //todo remove when implemented
         User mockUser = new User("Taras");
-        when(userDAO.getAllUsers()).thenReturn(Collections.singleton(mockUser));
+        when(userDAO.getAllUsers()).thenReturn(Collections.singletonList(mockUser));
 
         userDAO.clear();
 
@@ -41,7 +42,7 @@ public class UserDAOTest extends TestCase {
         user.setName("Taras");
         userDAO.save(user);
 
-        Set<User> users = userDAO.getAllUsers();
+        List<User> users = userDAO.getAllUsers();
         assertNotNull(users);
         assertEquals(1, users.size());
 
@@ -55,7 +56,7 @@ public class UserDAOTest extends TestCase {
 
         //todo remove when implemented
         User mockUser = new User("Taras");
-        when(userDAO.getAllUsers()).thenReturn(Collections.singleton(mockUser)).thenReturn(Collections.<User>emptySet());
+        when(userDAO.getAllUsers()).thenReturn(Collections.singletonList(mockUser)).thenReturn(Collections.<User>emptyList());
 
         userDAO.clear();
 
@@ -63,7 +64,7 @@ public class UserDAOTest extends TestCase {
         user.setName("Taras");
         userDAO.save(user);
 
-        Set<User> users = userDAO.getAllUsers();
+        List<User> users = userDAO.getAllUsers();
         assertNotNull(users);
         assertEquals(1, users.size());
 

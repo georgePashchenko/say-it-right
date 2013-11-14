@@ -17,6 +17,7 @@ public class MainActivity extends Activity {
 
     private SettingsDAO settingsDAO = SettingsDAOSQLite.INSTANCE;
     private UserDAO userDAO = UserDAOSQLite.INSTANCE;
+    private HistoryDAO historyDAO = HistoryDAOSQLite.INSTANCE;
 
     private List<User> users;
 
@@ -70,6 +71,7 @@ public class MainActivity extends Activity {
         User userToDelete = (User) userSpinner.getSelectedItem();
         if (userToDelete.getId() != 1) {
             userDAO.delete(userToDelete);
+            historyDAO.clear(userToDelete);
             User defUser = new User();
             defUser.setId(1);
             settingsDAO.updateActiveUser(defUser);
@@ -78,7 +80,10 @@ public class MainActivity extends Activity {
     }
 
     public void showHistory(View view) {
+        Spinner userSpinner = (Spinner) findViewById(R.id.settings_user);
+        User user = (User) userSpinner.getSelectedItem();
         Intent intent = new Intent(this, HistoryActivity.class);
+        intent.putExtra("user", user);
         startActivity(intent);
     }
 }
