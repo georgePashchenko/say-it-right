@@ -10,6 +10,12 @@ import km81m.say_it_right.logic.TestBlock;
  */
 public interface TestCaseDAO {
 
+    String TABLE = "test_tb";
+    String ID = "_id";
+    String WORD = "test_word";
+    String LEVEL = "test_level";
+    String RESULT = "test_result";
+
     /**
      * Get random n tests from storage
      * @param level test level

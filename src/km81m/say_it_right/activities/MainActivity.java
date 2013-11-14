@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import km81m.say_it_right.R;
+import km81m.say_it_right.logic.Level;
 import km81m.say_it_right.logic.dao.*;
 import km81m.say_it_right.logic.entities.Settings;
 import km81m.say_it_right.logic.entities.User;
@@ -58,6 +59,13 @@ public class MainActivity extends Activity {
 
     public void startTest(View view) {
         Intent intent = new Intent(this, GameActivity.class);
+        Spinner userSpinner = (Spinner) findViewById(R.id.settings_user);
+        User user = (User) userSpinner.getSelectedItem();
+        Spinner spinner = (Spinner) findViewById(R.id.settings_level);
+        Level level = Level.getByPos(spinner.getSelectedItemPosition());
+
+        intent.putExtra("user", user);
+        intent.putExtra("level", level);
         startActivity(intent);
     }
 

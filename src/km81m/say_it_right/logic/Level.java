@@ -29,4 +29,15 @@ public enum Level implements Serializable {
     public int getPosition() {
         return position;
     }
+
+    public static Level getByPos(int pos) {
+        if (pos == 0) {
+            return LOW;
+        } else if (pos == 1) {
+            return MEDIUM;
+        } else {
+            return HARD;
+        }
+    }
+
 }
