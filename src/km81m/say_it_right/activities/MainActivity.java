@@ -35,9 +35,15 @@ public class MainActivity extends Activity {
 
         DBHolder.init(getBaseContext());
 
+        setActiveSettings();
+    }
+
+
+    private void setActiveSettings() {
         Settings settings = settingsDAO.getActiveSettings();
         users = userDAO.getAllUsers();
 
+        Spinner spinner = (Spinner) findViewById(R.id.settings_level);
         spinner.setSelection(settings.getLevel().getPosition());
 
         Spinner userSpinner = (Spinner) findViewById(R.id.settings_user);
@@ -48,8 +54,6 @@ public class MainActivity extends Activity {
         int pos = users.indexOf(settings.getActiveUser());
         userSpinner.setSelection(pos);
     }
-
-
 
     public void startTest(View view) {
         Intent intent = new Intent(this, GameActivity.class);
@@ -66,6 +70,10 @@ public class MainActivity extends Activity {
         User userToDelete = (User) userSpinner.getSelectedItem();
         if (userToDelete.getId() != 1) {
             userDAO.delete(userToDelete);
+            User defUser = new User();
+            defUser.setId(1);
+            settingsDAO.updateActiveUser(defUser);
+            setActiveSettings();
         }
     }
 

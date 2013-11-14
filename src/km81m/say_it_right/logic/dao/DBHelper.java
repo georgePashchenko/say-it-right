@@ -6,7 +6,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * User: alexeydushenin
@@ -16,37 +18,23 @@ import java.io.*;
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final int VERSION = 1;
-    private static String DB_PATH = "/data/data/km81m.say-it-right/databases/";
     private static final String DB_NAME = "say_it_right.sql";
 
     private Context context;
-    private SQLiteDatabase db;
 
     public DBHelper(Context context) {
         super(context, DB_NAME, null, VERSION);
         this.context = context;
-        //createDB();
         create();
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
-        //importSettings(db);
-
-
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     }
-
-    /*private void importSettings(SQLiteDatabase db) {
-        ContentValues values = new ContentValues();
-        values.put(SettingsDAO.LEVEL, "LOW");
-        values.put(SettingsDAO.USER, 1);
-        db.insert(SettingsDAO.TABLE, null, values);
-    }*/
 
     public void create() {
         boolean isExists = isExists(getReadableDatabase());
@@ -91,56 +79,4 @@ public class DBHelper extends SQLiteOpenHelper {
         //return false;
     }
 
-    public void createDB() {
-        getReadableDatabase();
-        copyData();
-        openDB();
-    }
-
-    private void copyData() {
-        InputStream myInput = null;
-        OutputStream myOutput = null;
-
-        try {
-            myInput = context.getAssets().open(DB_NAME);
-            String outFileName = DB_PATH + DB_NAME;
-            myOutput = new FileOutputStream(outFileName);
-
-            byte[] buffer = new byte[1024];
-            int length;
-            while ((length = myInput.read(buffer)) > 0) {
-                myOutput.write(buffer, 0, length);
-            }
-            myOutput.flush();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } finally {
-            try {
-                if (myOutput != null) {
-                    myOutput.close();
-                }
-                if (myInput != null) {
-                    myInput.close();
-                }
-            } catch (IOException e) {}
-
-        }
-    }
-
-    private void openDB() {
-        String myPath = DB_PATH + DB_NAME;
-        db = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE);
-    }
-
-    @Override
-    public synchronized void close() {
-        if (db != null) {
-            db.close();
-        }
-        super.close();
-    }
-
-    public SQLiteDatabase getDb() {
-        return db;
-    }
 }
