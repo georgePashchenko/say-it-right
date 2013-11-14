@@ -56,10 +56,13 @@ public class GameActivity extends FragmentActivity {
     public void showResult(View view) {
         Intent intent = new Intent(this, ResultActivity.class);
         Bundle args = new Bundle();
-        TestResults testResults = new TestResults();
+        TestResults testResults = new TestResults(testBlock, userAnswer);
         args.putSerializable("res", testResults);
+        args.putSerializable("user", user);
+        args.putSerializable("level", level);
         intent.putExtras(args);
         startActivity(intent);
+        finish();
     }
 
 }

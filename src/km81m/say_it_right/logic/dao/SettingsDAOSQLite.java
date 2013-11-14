@@ -42,7 +42,11 @@ public enum SettingsDAOSQLite implements SettingsDAO {
 
     @Override
     public void setActiveSettings(Settings settings) {
-
+        SQLiteDatabase db = DBHolder.getDBHelper().getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(SettingsDAO.USER, settings.getActiveUser().getId());
+        values.put(SettingsDAO.LEVEL, settings.getLevel().toString());
+        db.update(SettingsDAO.TABLE, values, null, null);
     }
 
     @Override

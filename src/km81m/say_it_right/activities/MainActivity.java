@@ -64,6 +64,11 @@ public class MainActivity extends Activity {
         Spinner spinner = (Spinner) findViewById(R.id.settings_level);
         Level level = Level.getByPos(spinner.getSelectedItemPosition());
 
+        Settings settings = new Settings();
+        settings.setActiveUser(user);
+        settings.setLevel(level);
+        settingsDAO.setActiveSettings(settings);
+
         intent.putExtra("user", user);
         intent.putExtra("level", level);
         startActivity(intent);

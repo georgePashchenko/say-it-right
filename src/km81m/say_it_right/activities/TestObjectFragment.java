@@ -1,6 +1,5 @@
 package km81m.say_it_right.activities;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,7 +10,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import km81m.say_it_right.R;
 import km81m.say_it_right.logic.TestBlock;
-import km81m.say_it_right.logic.TestResults;
 import km81m.say_it_right.logic.UserAnswer;
 import km81m.say_it_right.logic.entities.SingleTest;
 

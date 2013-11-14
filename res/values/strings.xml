@@ -14,6 +14,11 @@
     <string name="add_user_button">ДОБАВИТЬ</string>
     <string name="input_user_name">ВВЕДИТЕ ИМЯ</string>
     <string name="test_end_button">ЗАВЕРШИТЬ</string>
+    <string name="result_label">РЕЗУЛЬТАТ</string>
+    <string name="result_user">ПОЛЬЗОВАТЕЛЬ</string>
+    <string name="result_level">УРОВЕНЬ</string>
+    <string name="result_correct">ПРАВИЛЬНЫХ ОТВЕТОВ</string>
+    <string name="result_to_main_value">ГЛАВНОЕ МЕНЮ</string>
 
     <string-array name="level_array">
         <item>ЛЕГКИЙ</item>

@@ -2,6 +2,7 @@ package km81m.say_it_right.logic.entities;
 
 import km81m.say_it_right.logic.Level;
 
+import java.text.DateFormat;
 import java.util.Date;
 
 /**
@@ -56,4 +57,8 @@ public class History {
         this.user = user;
     }
 
+    @Override
+    public String toString() {
+        return String.format("%10s %10s %10s", DateFormat.getInstance().format(date), level.getName(), result + "б.");
+    }
 }

@@ -8,12 +8,14 @@ import java.io.Serializable;
  * Time: 8:17 PM
  */
 public enum Level implements Serializable {
-    LOW(0), MEDIUM(1), HARD(2);
+    LOW(0, "ЛЕГКИЙ"), MEDIUM(1, "СРЕДНИЙ"), HARD(2, "ТЯЖЕЛЫЙ");
 
     private final int position;
+    private final String name;
 
-    private Level(int position) {
+    private Level(int position, String name) {
         this.position = position;
+        this.name = name;
     }
 
     public static Level getLevelByString(String level) {
@@ -28,6 +30,10 @@ public enum Level implements Serializable {
 
     public int getPosition() {
         return position;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public static Level getByPos(int pos) {

@@ -3,6 +3,53 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:layout_margin="@dimen/main_margin">
+
+    <TextView android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:text="@string/result_label"
+              android:layout_gravity="center"
+              android:textColor="@android:color/holo_green_dark"/>
+
+    <TextView android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:text="@string/result_user"
+              android:layout_gravity="center"
+              android:textColor="@android:color/holo_red_light"/>
+
+    <TextView android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:id="@+id/result_user_value"
+              android:layout_gravity="center"/>
+
+    <TextView android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:text="@string/result_level"
+              android:layout_gravity="center"
+              android:textColor="@android:color/holo_red_light"/>
+
+    <TextView android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:id="@+id/result_level_value"
+              android:layout_gravity="center"/>
+
+    <TextView android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:text="@string/result_correct"
+              android:layout_gravity="center"
+              android:textColor="@android:color/holo_red_light"/>
+
+    <TextView android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:id="@+id/result_correct_value"
+              android:layout_gravity="center"/>
+
+    <Button android:id="@+id/result_to_main"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/result_to_main_value"
+            android:onClick="toMain"
+            android:layout_gravity="center"/>
 
 </LinearLayout>
