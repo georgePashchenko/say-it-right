@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.EditText;
 import km81m.say_it_right.R;
 import km81m.say_it_right.logic.dao.SettingsDAO;
-import km81m.say_it_right.logic.dao.SettingsDAOImpl;
+import km81m.say_it_right.logic.dao.SettingsDAOSQLite;
 import km81m.say_it_right.logic.dao.UserDAO;
-import km81m.say_it_right.logic.dao.UserDAOImpl;
+import km81m.say_it_right.logic.dao.UserDAOSQLite;
 import km81m.say_it_right.logic.entities.User;
 
 /**
@@ -19,8 +19,8 @@ import km81m.say_it_right.logic.entities.User;
  */
 public class UserActivity extends Activity {
 
-    private UserDAO userDAO = UserDAOImpl.INSTANCE;
-    private SettingsDAO settingsDAO = SettingsDAOImpl.INSTANCE;
+    private UserDAO userDAO = UserDAOSQLite.INSTANCE;
+    private SettingsDAO settingsDAO = SettingsDAOSQLite.INSTANCE;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

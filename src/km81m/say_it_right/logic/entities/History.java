@@ -55,4 +55,5 @@ public class History {
     public void setUser(User user) {
         this.user = user;
     }
+
 }

@@ -13,7 +13,7 @@ import java.util.List;
  * Date: 11/13/13
  * Time: 3:21 PM
  */
-public enum UserDAOImpl implements UserDAO {
+public enum UserDAOSQLite implements UserDAO {
 
     INSTANCE;
 
@@ -61,7 +61,8 @@ public enum UserDAOImpl implements UserDAO {
 
     @Override
     public void clear() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        SQLiteDatabase db = DBHolder.getDBHelper().getWritableDatabase();
+        db.delete(UserDAO.TABLE, null, null);
     }
 
     @Override

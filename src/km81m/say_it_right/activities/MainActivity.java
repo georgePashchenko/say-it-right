@@ -15,8 +15,8 @@ import java.util.List;
 
 public class MainActivity extends Activity {
 
-    private SettingsDAO settingsDAO = SettingsDAOImpl.INSTANCE;
-    private UserDAO userDAO = UserDAOImpl.INSTANCE;
+    private SettingsDAO settingsDAO = SettingsDAOSQLite.INSTANCE;
+    private UserDAO userDAO = UserDAOSQLite.INSTANCE;
 
     private List<User> users;
 

@@ -12,11 +12,11 @@ import km81m.say_it_right.logic.entities.User;
  * Date: 11/13/13
  * Time: 3:48 PM
  */
-public enum  SettingsDAOImpl implements SettingsDAO {
+public enum SettingsDAOSQLite implements SettingsDAO {
 
     INSTANCE;
 
-    private UserDAO userDAO = UserDAOImpl.INSTANCE;
+    private UserDAO userDAO = UserDAOSQLite.INSTANCE;
 
     @Override
     public Settings getActiveSettings() {
