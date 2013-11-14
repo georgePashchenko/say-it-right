@@ -1,6 +1,7 @@
 package km81m.say_it_right.activities;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,6 +13,10 @@ import km81m.say_it_right.R;
 import km81m.say_it_right.logic.TestBlock;
 import km81m.say_it_right.logic.TestResults;
 import km81m.say_it_right.logic.UserAnswer;
+import km81m.say_it_right.logic.entities.SingleTest;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * User: alexeydushenin
@@ -32,13 +37,34 @@ public class TestObjectFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.simple_test, container, false);
         Bundle args = getArguments();
-        int pos = args.getInt("pos");
+        final int pos = args.getInt("pos");
+
+        final List<Button> buttons = new ArrayList<Button>();
 
         LinearLayout layout = (LinearLayout) rootView.findViewById(R.id.simple_test_layout);
-        for (int i = 0; i < pos; i++) {
-            Button button = new Button(layout.getContext());
-            button.setText(Integer.toString(pos));
+        final SingleTest test = testBlock.getSingleTests().get(pos);
+        for (int i = 0; i < test.getWord().length(); i++) {
+            final Button button = new Button(layout.getContext());
+            buttons.add(button);
+            button.setText(String.valueOf(test.getWord().charAt(i)));
             layout.addView(button);
+            final int temp = i + 1;
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    userAnswer.addAnswer(pos, temp);
+                    for (Button b : buttons) {
+                        b.setEnabled(false);
+                    }
+                    if (temp == test.getAnswer()) {
+                        button.setBackgroundColor(Color.GREEN);
+                    } else {
+                        button.setBackgroundColor(Color.RED);
+                        buttons.get(test.getAnswer() - 1).setBackgroundColor(Color.BLUE);
+                    }
+
+                }
+            });
         }
         return rootView;
     }
