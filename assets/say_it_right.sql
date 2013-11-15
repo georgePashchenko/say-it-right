@@ -21,3 +21,25 @@ insert into test_tb (test_word, test_result, test_level) values ("БАЙТ", 2, 
 insert into test_tb (test_word, test_result, test_level) values ("КОТ", 2, "LOW");
 insert into test_tb (test_word, test_result, test_level) values ("ДОМ", 2, "LOW");
 insert into test_tb (test_word, test_result, test_level) values ("ДВЕРЬ", 3, "LOW");
+
+insert into test_tb (test_word, test_result, test_level) values ("АБЗАЦ", 4, "MEDIUM");
+insert into test_tb (test_word, test_result, test_level) values ("АБИТУРИЕНТ", 8, "MEDIUM");
+insert into test_tb (test_word, test_result, test_level) values ("АБОНЕНТ", 5, "MEDIUM");
+insert into test_tb (test_word, test_result, test_level) values ("АБРИКОС", 6, "MEDIUM");
+insert into test_tb (test_word, test_result, test_level) values ("АБСОЛЮТ", 6, "MEDIUM");
+insert into test_tb (test_word, test_result, test_level) values ("БАЗАЛЬТ", 4, "MEDIUM");
+insert into test_tb (test_word, test_result, test_level) values ("БАЙТ", 2, "MEDIUM");
+insert into test_tb (test_word, test_result, test_level) values ("КОТ", 2, "MEDIUM");
+insert into test_tb (test_word, test_result, test_level) values ("ДОМ", 2, "MEDIUM");
+insert into test_tb (test_word, test_result, test_level) values ("ДВЕРЬ", 3, "MEDIUM");
+
+insert into test_tb (test_word, test_result, test_level) values ("АБЗАЦ", 4, "HARD");
+insert into test_tb (test_word, test_result, test_level) values ("АБИТУРИЕНТ", 8, "HARD");
+insert into test_tb (test_word, test_result, test_level) values ("АБОНЕНТ", 5, "HARD");
+insert into test_tb (test_word, test_result, test_level) values ("АБРИКОС", 6, "HARD");
+insert into test_tb (test_word, test_result, test_level) values ("АБСОЛЮТ", 6, "HARD");
+insert into test_tb (test_word, test_result, test_level) values ("БАЗАЛЬТ", 4, "HARD");
+insert into test_tb (test_word, test_result, test_level) values ("БАЙТ", 2, "HARD");
+insert into test_tb (test_word, test_result, test_level) values ("КОТ", 2, "HARD");
+insert into test_tb (test_word, test_result, test_level) values ("ДОМ", 2, "HARD");
+insert into test_tb (test_word, test_result, test_level) values ("ДВЕРЬ", 3, "HARD");

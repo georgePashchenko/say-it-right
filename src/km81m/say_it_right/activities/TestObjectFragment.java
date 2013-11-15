@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import km81m.say_it_right.R;
 import km81m.say_it_right.logic.TestBlock;
 import km81m.say_it_right.logic.UserAnswer;
@@ -36,6 +37,9 @@ public class TestObjectFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.simple_test, container, false);
         Bundle args = getArguments();
         final int pos = args.getInt("pos");
+
+        TextView textView = (TextView) rootView.findViewById(R.id.simple_test_label);
+        textView.setText("Тест №" + (pos + 1) + "/10");
 
         final List<Button> buttons = new ArrayList<Button>();
 

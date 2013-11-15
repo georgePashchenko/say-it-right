@@ -14,10 +14,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activities.HistoryActivity"/>
-        <activity android:name=".activities.GameActivity"/>
-        <activity android:name=".activities.UserActivity"/>
-        <activity android:name=".activities.ResultActivity"/>
+        <activity android:name=".activities.HistoryActivity" android:label="@string/history_page"/>
+        <activity android:name=".activities.GameActivity"  android:label="@string/test_page"/>
+        <activity android:name=".activities.UserActivity"  android:label="@string/user_page"/>
+        <activity android:name=".activities.ResultActivity"  android:label="@string/result_page"/>
     </application>
 
 
