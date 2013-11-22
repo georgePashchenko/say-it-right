@@ -13,3 +13,9 @@ Each test consists of 10 words, in which user has to place stress. And if you th
 * Oleksandra Mirochnyk
 
 ![Alt text](http://www.gifize.com/wp-content/uploads/2013/05/kittens.gif)
+
+####Specifications:
+Our application uses no more than 4 MB of memory, so it can be launched on almost any device.
+
+![Alt text](http://f4.s.qip.ru/adNBVnCO.png)
+![Alt text](http://f3.s.qip.ru/adNBVnCQ.png)
